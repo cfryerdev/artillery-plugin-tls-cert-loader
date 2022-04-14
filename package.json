@@ -1,0 +1,22 @@
+{
+  "name": "cfryerdev-artillery-plugin-certs",
+  "version": "1.0.0",
+  "description": " Artillery.io Plugin that allows you to attach various forms of SSL",
+  "main": "index.js",
+  "scripts": {
+    "publish": "np"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfryerdev/cfryerdev-artillery-plugin-certs.git"
+  },
+  "author": "Chris Fryer <cfryerdev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cfryerdev/cfryerdev-artillery-plugin-certs/issues"
+  },
+  "homepage": "https://github.com/cfryerdev/cfryerdev-artillery-plugin-certs#readme",
+  "dependencies": {
+    "np": "^7.6.1"
+  }
+}
