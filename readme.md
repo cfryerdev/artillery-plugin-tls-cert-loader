@@ -16,7 +16,8 @@ config:
   tls:
     rejectUnauthorized: false
   plugins:
-    tls-cert-loader: 
+    tls-cert-loader:
+      config:
         pfx: "./path/to/file.pfx"
 ```
 
