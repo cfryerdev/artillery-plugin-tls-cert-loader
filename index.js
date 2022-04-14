@@ -4,19 +4,17 @@ const fs = require('fs');
 module.exports.Plugin = TlsCertLoaderPlugin;
 
 function TlsCertLoaderPlugin (script, events) {
-  const config = script.config.plugins['tls-cert-loader'];
+  const pluginConfig = script.config.plugins['tls-cert-loader'];
 
-  if (!config) {
+  if (!pluginConfig) {
     throw new Error('Plugin: Plugin config node not found. Aborting.');
   }
   
-  console.log('config', config);
-  console.log('script.config', script.config);
-  for (var attr in config) {
+  for (var attr in pluginConfig) {
       try {
-        script.config.tls[attr] = fs.readFileSync(config[attr])
+        script.config.tls[attr] = fs.readFileSync(pluginConfig.config[attr])
       } catch (e) {
-          console.error(`Unable to load [${attr}] from [${config[attr]}]`);
+          console.error(`Unable to set config value: [${attr}] Path: [${pluginConfig.config[attr]}]`);
       }
   }
   return this;
