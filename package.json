@@ -1,6 +1,6 @@
 {
   "name": "artillery-plugin-tls-cert-loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": " Artillery.io Plugin that allows you to attach various forms of SSL",
   "main": "index.js",
   "scripts": {
