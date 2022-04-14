@@ -10,7 +10,7 @@ function TlsCertLoaderPlugin (script, events) {
     throw new Error('Plugin: Plugin config node not found. Aborting.');
   }
   
-  for (var attr in pluginConfig) {
+  for (var attr in pluginConfig.config) {
       try {
         script.config.tls[attr] = fs.readFileSync(pluginConfig.config[attr])
       } catch (e) {
