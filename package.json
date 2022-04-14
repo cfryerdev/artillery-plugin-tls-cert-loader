@@ -1,6 +1,6 @@
 {
   "name": "cfryerdev-artillery-plugin-certs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": " Artillery.io Plugin that allows you to attach various forms of SSL",
   "main": "index.js",
   "scripts": {
