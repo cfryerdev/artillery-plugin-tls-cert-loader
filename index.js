@@ -3,8 +3,8 @@ const fs = require('fs');
 
 module.exports.Plugin = TlsCertLoaderPlugin;
 
-function TlsCertLoaderPlugin ({ tls }, events) {
-  console.log('this', this);
+function TlsCertLoaderPlugin (script, events) {
+  console.log('script', script);
   const self = this;
   console.log('self', self);
   if (!self.config.tls) {
