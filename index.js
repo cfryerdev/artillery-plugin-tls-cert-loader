@@ -6,6 +6,7 @@ module.exports.Plugin = TlsCertLoaderPlugin;
 function TlsCertLoaderPlugin ({ tls }, events) {
   console.log('this', this);
   const self = this;
+  console.log('self', self);
   if (!self.config.tls) {
     throw new Error('Plugin: TLS config node not found. Aborting.');
   }
