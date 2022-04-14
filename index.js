@@ -14,7 +14,8 @@ function TlsCertLoaderPlugin (script, events) {
       try {
         script.config.tls[attr] = fs.readFileSync(pluginConfig.config[attr])
       } catch (e) {
-          console.error(`Unable to set config value: [${attr}] Path: [${pluginConfig.config[attr]}]`);
+        console.warn(e);
+        console.error(`Unable to set config value: [${attr}] Path: [${pluginConfig.config[attr]}]`);
       }
   }
   return this;
