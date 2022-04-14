@@ -4,19 +4,19 @@ const fs = require('fs');
 module.exports.Plugin = TlsCertLoaderPlugin;
 
 function TlsCertLoaderPlugin (script, events) {
-  const self = this;
-  self.config = script.config.plugins['tls-cert-loader'];
+  const config = script.config.plugins['tls-cert-loader'];
 
-  if (!self.config.tls) {
-    throw new Error('Plugin: TLS config node not found. Aborting.');
+  if (!config) {
+    throw new Error('Plugin: Plugin config node not found. Aborting.');
   }
   
-  console.log('tls', self.config.tls)
-  for (var attr in self.config.tls) {
+  console.log('config', config);
+  console.log('script.config', script.config);
+  for (var attr in config) {
       try {
-        script.config.tls[attr] = fs.readFileSync(self.config.tls[attr])
+        script.config.tls[attr] = fs.readFileSync(config[attr])
       } catch (e) {
-          console.error(`Unable to load [${attr}] from [${tls[attr]}]`);
+          console.error(`Unable to load [${attr}] from [${config[attr]}]`);
       }
   }
   return this;
