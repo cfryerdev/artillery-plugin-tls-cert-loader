@@ -1,5 +1,5 @@
 {
-  "name": "cfryerdev-artillery-plugin-certs",
+  "name": "artillery-plugin-tls-cert-loader",
   "version": "0.0.1",
   "description": " Artillery.io Plugin that allows you to attach various forms of SSL",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cfryerdev/cfryerdev-artillery-plugin-certs.git"
+    "url": "git+https://github.com/cfryerdev/artillery-plugin-tls-cert-loader.git"
   },
   "author": "Chris Fryer <cfryerdev@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cfryerdev/cfryerdev-artillery-plugin-certs/issues"
+    "url": "https://github.com/cfryerdev/artillery-plugin-tls-cert-loader/issues"
   },
-  "homepage": "https://github.com/cfryerdev/cfryerdev-artillery-plugin-certs#readme",
+  "homepage": "https://github.com/cfryerdev/artillery-plugin-tls-cert-loader#readme",
   "dependencies": {
     "np": "^7.6.1"
   }
