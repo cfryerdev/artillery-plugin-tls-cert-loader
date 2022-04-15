@@ -12,6 +12,9 @@ function TlsCertLoaderPlugin (script, events) {
   
   for (var attr in pluginConfig.config) {
       try {
+        if (!script.config.tls) {
+          script.config.tls = {};
+        }
         script.config.tls[attr] = fs.readFileSync(pluginConfig.config[attr])
       } catch (e) {
         console.warn(e);
